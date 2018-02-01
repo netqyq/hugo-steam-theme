@@ -1,17 +1,54 @@
 @import url('//fonts.googleapis.com/css?subset=latin,cyrillic-ext,latin-ext,cyrillic&family=Open+Sans+Condensed:300|Open+Sans:400,600,400italic,600italic|Merriweather:400,300,300italic,400italic,700,700italic|Roboto+Slab:400,300');
 @import url('//netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css');
 /* === Core Styles === */
+html {
+  background-color: cyan;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.home-template {
+  min-height: 100%;
+  display: block;
+  padding: 0px;
+  margin: 0;
+  padding-bottom: 142px;
+}
+
 body {
+  margin-bottom: 0px;
+  position: relative;
+  bottom: 0;
   background-color: #ffffff;
   color: #596364; /* darker color */
   font-size: 15px;
   font-weight: 100;
   line-height: 1.6em;
-  margin: 0;
-  padding: 0;
+
   -webkit-font-smoothing: subpixel-antialiased;
   -webkit-tap-highlight-color: rgba(0,0,0,0); /* prevent grey link highlight in iOS */
 }
+
+header#site-head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  /* background-color: #ccc; */
+  height: 150px;
+}
+
+.post header {
+    margin-bottom: 40px;
+}
+
+
+.post-content {
+  margin-top: 20px;
+}
+
+
 body * {
   max-height: 1000000em;
 }
@@ -100,15 +137,21 @@ h1 {
   margin: 0;
   padding: 0;
 }
+
+
 #site-head,
 article,
 article.preview,
 a.archive-link,
 .article-nav,
 .terms-list {
-  margin: 20px auto;
+  /* margin: 20px auto; */
+  margin-left: auto;
+  margin-right: auto;
+
   max-width: 600px;
   width: 90%;
+
 }
 #site-head img {
   max-width: 100%;
@@ -118,7 +161,7 @@ article.preview {
 }
 article.preview p.readmore {
   font-family: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
-  margin-top: 1em;
+  margin: 0px;
   text-transform: uppercase;
   font-weight: 400;
 }
@@ -145,7 +188,7 @@ h2.blog-description {
 h1.blog-title {
   font-size: 50px;
   line-height: 52px;
-  margin-top: 80px;
+
   margin-bottom: 5px;
   padding: 0;
 }
@@ -153,7 +196,7 @@ h1.blog-subtitle {
   font-size: 26px;
   line-height: 32px;
   margin-top: -8px;
-  margin-bottom: 85px;
+  /* margin-bottom: 85px; */
   margin-left: 1px;
   padding: 0;
 }
@@ -648,6 +691,11 @@ hr {
 }
 
 .site-footer {
+  display: block;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
   color: #899596;
 }
 
